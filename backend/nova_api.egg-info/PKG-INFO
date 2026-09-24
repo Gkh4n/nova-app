@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: nova-api
+Version: 1.0.0b1
+Summary: NOVA v1 Beta API
+Requires-Python: >=3.10
+Requires-Dist: fastapi<0.142.0,>=0.141.1
+Requires-Dist: uvicorn[standard]<1.0,>=0.30
+Requires-Dist: sqlalchemy<2.1,>=2.0.54
+Requires-Dist: psycopg[binary]<4,>=3.2
+Requires-Dist: PyJWT<3,>=2.10
+Provides-Extra: dev
+Requires-Dist: pytest<10,>=8; extra == "dev"
+Requires-Dist: httpx<1,>=0.28; extra == "dev"

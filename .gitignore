@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+backend/nova.db
+backend/test_nova.db
+
+# Environment
+.env
+backend/.env
+
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+mobile/android/.gradle/
+mobile/ios/Pods/
+
+# IDE
+.vscode/
+.idea/
+
+# === NOVA safety / local files ===
+.env
+.env.*
+!.env.example
+
+# Python
+backend/.venv/
+backend/venv/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Databases / local runtime data
+*.db
+*.sqlite
+*.sqlite3
+backend/tests/test_nova.db
+
+# Flutter / Dart
+mobile/.dart_tool/
+mobile/build/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/.packages
+mobile/pubspec.lock
+
+# Android local / signing secrets
+mobile/android/local.properties
+mobile/android/key.properties
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs / temp
+*.log
+*.tmp
+*.bak
+NOVA-backups/

@@ -1,4 +1,4 @@
-import 'dart:convert';
+﻿import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -15,7 +15,7 @@ class ApiClient {
   ApiClient({
     this.baseUrl = const String.fromEnvironment(
       'NOVA_API_URL',
-      defaultValue: 'http://127.0.0.1:8000/api/v1',
+      defaultValue: 'https://nova-api-6eie.onrender.com/api/v1',
     ),
   });
 
@@ -142,7 +142,7 @@ class ApiClient {
     try {
       decoded = response.body.isEmpty ? <String, dynamic>{} : jsonDecode(response.body);
     } catch (_) {
-      throw ApiException('Sunucudan geçersiz bir yanıt geldi.', response.statusCode);
+      throw ApiException('Sunucudan geÃ§ersiz bir yanÄ±t geldi.', response.statusCode);
     }
     if (response.statusCode >= 400) throw ApiException(_message(decoded), response.statusCode);
     return decoded;
@@ -154,6 +154,7 @@ class ApiClient {
       if (detail is List && detail.isNotEmpty && detail.first is Map && detail.first['msg'] != null) return detail.first['msg'].toString();
       return detail.toString();
     }
-    return 'Bir şey ters gitti.';
+    return 'Bir ÅŸey ters gitti.';
   }
 }
+
